@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>201713739 김도연</title>
+    <style>
+    
+        #wrapper{
+            width: 1000px; margin: 0 auto;
+        }
+       
+        section{
+            float: right;
+            width:80%;
+        }
+        #left{
+            width: 20%;
+            float:left;
+            text-align: center;
+            
+        }
+        #menu{
+            float: left;
+            width: 100%;
+            background-color: #E6E6E6;
+            position: relative;
+            margin : 1% 1% 1% 0%;
+            
+        }
+        #menu ul{
+            list-style-type: none;
+        }
+        #menu ul li{
+            display: inline-block;
+            padding: 0 20px;
+        }
+        #left-img{
+            display: inline-block;
+            height: 120px;
+            width: 120px;
+        }
+        #introduce{
+            text-align: center;
+        }
+        #left ul{
+            list-style-type: none;
+        }
+        #left ul li{
+            display: inline-block;
+        }
+        #contact-img{
+            display:inline-block;
+            height: 50px;
+            width: 50px;
+        }
+        #right{
+            width: 750px; margin: 0 auto;
+            
+        }
+        #right-wrapper{
+            text-align: center;
+            font-family:'Impact';
+            font-style: italic;
+        }
+        a:link { color:plum ; text-decoration: none;}
+	 	a:visited { color:blue; text-decoration: none;}
+	 	a:hover { color: yellowgreen; text-decoration:none;}
+         @media only screen and (max-width: 768px) {
+            #left {
+		        display:none;
+	        }
+            #wrapper{
+                float:none;
+                width:auto;
+            }
+            #right {
+                float:none;
+                width:auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <!--헤더-->
+        <header id="menu">
+            <ul>
+                <a href="웹프로그래밍 프로젝트.html"><li>도연의 웹페이지</li></a>
+                <a href="웹페이지소개.html"><li>웹페이지 소개</li></a>
+                <a href="작가소개.html"><li>작가 소개</li></a>
+                <a href="책소개.html"><li>책 소개</li></a>
+                <a href="마무리.html"><li>마무리</li></a>
+            </ul>
+        </header>
+        <!--콘텐츠부분-->
+        <div id="content"> 
+                <aside id="left">
+                    <ul>
+                        <li><img id="left-img" src="김도연.jpg"></li> 
+                        <li><b><br>김도연</b></li>
+                        <p id="typing"></p>
+                <script src="https://ajax.​googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                <script>
+                    $(document).ready(function(){
+                        var i=0;
+                        var x = '안녕하세요~ 컴퓨터공학부 3학년 김도연의 웹페이지입니다.';
+                        var y = "";
+                        
+                        function typeWriter() {
+                            if(i < x.length) {
+                                $("#typing").text(y+=x[i]);
+                                i++;
+
+                                setTimeout(typeWriter, 100);
+                            }
+                        }
+                    
+                    typeWriter();
+                });
+                </script>
+                        
+                        <li>:::::CONTACT ME:::::</li>
+                    </ul>
+                    <ul>
+                        <li><a href="mailto:kimdy3113@gmail.com"><img id="contact-img" src="email.png"></a></li>
+                        <li><a href="https://github.com/joyfulviper"><img id="contact-img" src="github.png"></a></li>
+                    </ul>
+                </ul>
+                </aside>
+            <section id="right">
+                <p><br><br></p>
+                <div id="right-wrapper">
+                     <div>
+                         <img src="감사합니다.gif">
+                     </div>
+                     <div>
+                        <p id="end"></p>
+                        <script src="https://ajax.​googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                        <script>
+                            $(document).ready(function(){
+                                var i=0;
+                                var x = "이상으로 나만의 웹페이지 소개를 마치도록 하겠습니다.  방문해 주셔서 감사합니다.";
+                                var y = "";
+                                
+                                function typeWriter() {
+                                    if(i < x.length) {
+                                        $("#end").text(y+=x[i]);
+                                        i++;
+        
+                                        setTimeout(typeWriter, 100);
+                                    }
+                                }
+                            
+                            typeWriter();
+                        });
+                        </script>
+                        
+                        
+                     </div>
+                    </div>
+            </section>
+        </div>
+    </div>
+
+    
+</body>
+</html>
